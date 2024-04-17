@@ -7,7 +7,7 @@
 
 import java.util.Scanner;
 
-public class heapsort {
+public class dsa_practical9 {
     public int[] heap;
     public int count;
 
@@ -79,7 +79,7 @@ public class heapsort {
     }
 
     public static void main(String[] args) {
-        heapsort myobject = new heapsort();
+        dsa_practical9 myobject = new dsa_practical9();
         myobject.create();
         myobject.sort();
         myobject.print();

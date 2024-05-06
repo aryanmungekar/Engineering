@@ -298,3 +298,45 @@ int main()
     }
     return 0;
 }
+
+/*
+
+THEORY 
+Algorithm:
+Add Student Information:
+Prompt the user to input the roll number, name, division, and address of the student.
+Append this information to the end of the sequential file.
+Delete Student Information:
+Prompt the user to input the roll number of the student to be deleted.
+Search the sequential file for the record with the given roll number and remove it if found.
+Display Student Information:
+Prompt the user to input the roll number of the student to display.
+Search the sequential file for the record with the given roll number and display the information if found.
+If the record does not exist, display an appropriate message.
+Analysis:
+Adding Student Information:
+Time Complexity: O(1) for appending records to the end of the file.
+Space Complexity: O(n) for storing the new record in the file.
+Deleting Student Information:
+Time Complexity: O(n) in the worst case to search and delete a record from the file.
+Space Complexity: O(1) for the deletion operation.
+Displaying Student Information:
+Time Complexity: O(n) in the worst case to search for a record in the file.
+Space Complexity: O(1) for displaying the record.
+Real-World Considerations:
+File Organization:
+Choose an appropriate file organization method (e.g., sequential, indexed) based on the size of the dataset and the frequency of operations.
+Error Handling:
+Implement error handling mechanisms to handle cases where the file cannot be accessed or modified.
+Data Validation:
+Validate user inputs to ensure that they are in the correct format and within acceptable ranges.
+Conclusion:
+Using a sequential file to maintain student information allows for efficient addition, deletion, and retrieval of records. By analyzing the algorithm, we understand its time and space complexity, enabling us to design and implement a reliable system for managing student information. Additionally, considering real-world factors such as file organization and error handling ensures the robustness of the system in practical scenarios.
+
+
+
+
+
+
+
+*/

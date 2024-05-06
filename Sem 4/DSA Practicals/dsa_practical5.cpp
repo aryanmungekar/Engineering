@@ -211,3 +211,33 @@ int main() {
 	return 0;
 
     }
+
+	/*
+	
+	Theory:
+Threaded Binary Tree:
+In a threaded binary tree, some nodes have additional pointers called "threads" that point to either the inorder predecessor or successor of the node.
+Threads are added to nodes with null left or right child pointers, allowing for efficient traversal without recursion.
+Types of Threads:
+Inorder Thread: Points to the inorder successor of a node.
+Preorder Thread: Points to the preorder successor of a node.
+Postorder Thread: Points to the postorder successor of a node.
+Construction Algorithm:
+Start with an empty threaded binary tree.
+Traverse the original binary tree in a specific order (inorder, preorder, or postorder).
+For each node encountered during traversal, add threads as necessary based on the presence of null left or right child pointers.
+Time and Space Complexity:
+Construction:
+Time Complexity: O(n), where n is the number of nodes in the original binary tree. Traversing the tree takes O(n) time, and adding threads takes constant time per node.
+Space Complexity: O(n), where n is the number of nodes in the original binary tree. Additional space is required to store the threaded binary tree.
+Real-World Considerations:
+Traversal Order:
+The efficiency of traversal may vary depending on the chosen traversal order (inorder, preorder, or postorder). In general, inorder threading is commonly used for efficient inorder traversal.
+Balancing:
+If the original binary tree is balanced, the resulting threaded binary tree may also maintain balance, leading to efficient operations.
+Thread Maintenance:
+Threaded binary trees require careful maintenance when performing operations like insertion, deletion, or balancing to ensure that thread pointers remain valid.
+Use Cases:
+Threaded binary trees are useful for applications where efficient traversal is critical, such as in-memory databases or expression evaluation.
+Conclusion:
+Converting a binary tree into a threaded binary tree offers advantages in terms of space and time efficiency for certain traversal operations. However, the construction algorithm involves traversing the entire original binary tree, resulting in linear time complexity. Additionally, extra space is required to store the threaded binary tree. Careful consideration of traversal order and maintenance of thread pointers are necessary for optimal performance in real-world scenarios.*/

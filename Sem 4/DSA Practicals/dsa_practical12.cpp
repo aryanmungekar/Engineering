@@ -311,3 +311,39 @@ int main()
         }
     }
 }
+
+/*
+THEORY 
+Algorithm:
+Add Employee Information:
+Prompt the user to input the employee ID, name, designation, and salary.
+Append this information to the end of the sequential file.
+Update the index file to include the new record's position in the sequential file.
+Delete Employee Information:
+Prompt the user to input the employee ID of the employee to be deleted.
+Search the index file for the record with the given employee ID and mark it as deleted.
+Remove the corresponding record from the sequential file.
+Display Employee Information:
+Prompt the user to input the employee ID of the employee to display.
+Search the index file for the record with the given employee ID.
+If the record exists and is not marked as deleted, retrieve the corresponding record from the sequential file and display the information.
+If the record does not exist or is marked as deleted, display an appropriate message.
+Analysis:
+Adding Employee Information:
+Time Complexity: O(1) for appending records to the end of the file.
+Space Complexity: O(n) for storing the new record in the file and updating the index file.
+Deleting Employee Information:
+Time Complexity: O(1) for marking the record as deleted in the index file.
+Space Complexity: O(1) for the deletion operation.
+Displaying Employee Information:
+Time Complexity: O(1) for accessing the index file and retrieving the record from the sequential file.
+Space Complexity: O(1) for displaying the record.
+Real-World Considerations:
+Index Sequential File Structure:
+Design the index sequential file structure to efficiently support insertion, deletion, and retrieval operations.
+File Maintenance:
+Implement mechanisms to reorganize the files periodically to maintain optimal performance, especially after deletions and insertions.
+Data Integrity:
+Ensure data integrity by handling cases where the index file and the sequential file become inconsistent due to failures or errors during operations.
+Conclusion:
+Using an indexed sequential file to maintain employee information allows for efficient addition, deletion, and retrieval of records while preserving the advantages of sequential file organization. By analyzing the algorithm, we understand its time and space complexity, enabling us to design and implement a reliable system for managing employee information. Additionally, considering real-world factors such as file maintenance and data integrity ensures the robustness of the system in practical scenarios.*/

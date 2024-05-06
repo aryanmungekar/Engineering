@@ -232,5 +232,29 @@ int main(){
     return 0;
 }
 
+/*
 
-
+Theory:
+Binary Search Tree (BST):
+A binary search tree is a binary tree where each node has at most two children, and the key (value) of each node is greater than the keys in its left subtree and less than the keys in its right subtree. This property allows for efficient searching, insertion, and deletion operations.
+Standard BST Operations:
+Insertion: Insert a new node into the BST while maintaining the BST property.
+Search: Find a node with a specific value in the BST.
+Traversal: Visit all nodes of the BST in a specific order (e.g., inorder, preorder, postorder).
+Deletion: Remove a node from the BST while preserving the BST property.
+Additional Operations:
+Height Calculation: Determine the height of the BST, which represents the longest path from the root to a leaf node.
+Minimum Value: Find the minimum value stored in the BST by traversing the left subtree recursively.
+Pointer Swapping: Swap the left and right pointers of each node in the BST.
+Insertion of a New Node: Insert a new node into the BST after construction.
+Conclusion:
+Efficiency of BST Operations:
+Insertion, search, and deletion operations in a BST typically have time complexities of O(log n) on average, where n is the number of nodes in the tree. However, they can degrade to O(n) in the worst case for unbalanced trees.
+Traversal of the tree can be done in O(n) time, where n is the number of nodes.
+Operations like finding the height, minimum value, and pointer swapping also have time complexities of O(n) since they require traversing the entire tree.
+Handling Unbalanced Trees:
+Unbalanced trees can lead to inefficient operations, especially for search and insertion. Balancing techniques like AVL trees or Red-Black trees can help maintain balance and improve performance.
+Space Complexity:
+The space complexity of a BST is O(n) to store the nodes, where n is the number of nodes in the tree.
+Real-World Considerations:
+When implementing BST operations, it's essential to consider factors like maintaining balance, handling edge cases, and optimizing for the specific requirements of the application.*/

@@ -168,3 +168,45 @@ int main()
   }               
      return 0;
 } 
+
+/*
+Theory:
+Hashing:
+Hashing is a technique that converts keys into a hash code, which is then used to index the data structure (hash table). This allows for efficient key-based retrieval operations.
+Chaining:
+Chaining is a collision resolution technique where each bucket in the hash table maintains a linked list of elements that hash to the same index. When a collision occurs, the new element is simply appended to the linked list at that index.
+With Replacement:
+With replacement, when a new element collides with an existing one, it replaces the existing element. This simplifies insertion but can lead to potential data loss.
+Standard Operations:
+Insert(key, value):
+Compute the hash code for the key.
+If the bucket at the hashed index is empty, insert the key-value pair.
+If the bucket is not empty, traverse the linked list:
+If the key already exists, update its value.
+If the key doesn't exist, append the new key-value pair to the end of the linked list.
+Find(key):
+Compute the hash code for the key.
+Traverse the linked list at the hashed index:
+If the key is found, return its associated value.
+If the key is not found, return an appropriate indication (e.g., null).
+Delete(key):
+Compute the hash code for the key.
+Traverse the linked list at the hashed index:
+If the key is found, remove the key-value pair from the linked list.
+If the key is not found, return an appropriate indication (e.g., key not found).
+Handling Collisions:
+Chaining without Replacement:
+When a collision occurs, simply append the new element to the end of the linked list at the hashed index.
+Chaining with Replacement:
+When a collision occurs, replace the existing key-value pair with the new one.
+Real-World Considerations:
+Load Factor:
+Monitor the load factor of the hash table to determine when to resize the underlying array and rehash elements.
+Linked List Efficiency:
+Choose an efficient linked list implementation (e.g., singly linked list, doubly linked list) to minimize traversal times.
+Collision Rate:
+Track the collision rate and evaluate the performance of the chosen collision resolution strategy under different scenarios.
+Hash Function Quality:
+Use a high-quality hash function to distribute keys evenly across the hash table and minimize collisions.
+
+*/

@@ -93,3 +93,41 @@ int main(){
     
     return 0;
 }
+
+/*
+
+Theory:
+Graph Representation:
+Represent flight paths between cities as a graph, where each city is a node and each flight path is an edge.
+The cost of an edge can represent the time taken for the flight or the amount of fuel used for the journey.
+Adjacency List Representation:
+In the adjacency list representation, each node (city) is associated with a list of its adjacent nodes (cities), along with the corresponding edge costs.
+This representation is space-efficient for sparse graphs (graphs with fewer edges) since it only stores information about connected nodes.
+Connectivity:
+A graph is connected if there is a path between every pair of vertices (cities) in the graph.
+To check for connectivity, perform a depth-first or breadth-first traversal starting from a node and ensure that all nodes are visited.
+Storage Representation Justification:
+Adjacency List:
+Advantages:
+Space-efficient for sparse graphs, which is common for flight networks where not all cities are directly connected.
+Allows for efficient access to neighbors of each node.
+Compact representation, especially for large graphs.
+Justification:
+Flight networks typically exhibit a sparse connectivity pattern, with many cities having a limited number of direct flight connections. Using an adjacency list representation conserves memory by only storing information about connected cities, making it well-suited for this scenario.
+Connectivity Check:
+Algorithm:
+Choose any node as the starting point.
+Perform a depth-first or breadth-first traversal from the starting node, marking visited nodes.
+If all nodes are visited, the graph is connected; otherwise, it's disconnected.
+Time Complexity:
+Depth-first or breadth-first traversal takes O(V + E) time, where V is the number of vertices (cities) and E is the number of edges (flight paths).
+Checking connectivity involves visiting all nodes once, so the time complexity is O(V + E).
+Real-World Considerations:
+Edge Costs:
+Ensure that the cost associated with each edge accurately reflects the relevant metric for flight paths, such as travel time or fuel consumption.
+Efficient Connectivity Checks:
+For large graphs, consider optimizations like parallel processing or using specialized algorithms for connectivity checks to improve efficiency.
+Graph Update Frequency:
+Consider the frequency of updates to the flight network when choosing the storage representation. If the network changes frequently, a more dynamic representation may be necessary.
+Conclusion:
+Representing flight paths between cities as a graph using the adjacency list representation provides a space-efficient and effective way to model connectivity. Checking for graph connectivity can be efficiently performed using traversal algorithms. The choice of adjacency list representation is justified for its space efficiency, especially in scenarios where the graph exhibits sparse connectivity patterns.*/

@@ -202,3 +202,42 @@ int main(){
     }   
     return 0;
 }
+
+
+/*
+
+Theory:
+Space Complexity:
+Separate Chaining: Requires additional space to store pointers for linked lists in each bucket.
+Open Addressing: Space efficiency depends on the load factor and the number of elements stored. With a low load factor, open addressing can be more space-efficient as it avoids the overhead of maintaining linked lists.
+Collision Resolution:
+Separate Chaining: Collisions are resolved by chaining elements in linked lists, which doesn't require moving existing elements.
+Open Addressing: Collisions are resolved by finding alternative slots, which may involve additional computation to find the next available slot.
+Performance in Dense and Sparse Data:
+Separate Chaining: Works well with sparse data (low load factor) but may degrade in performance with dense data due to longer linked lists.
+Open Addressing: Can be more suitable for dense data as it avoids the overhead of maintaining linked lists, but clustering can occur, leading to degraded performance.
+Empirical Comparison:
+Experimental Setup:
+Generate a large dataset of telephone numbers and associated keys.
+Implement both separate chaining and open addressing hash tables.
+Vary the load factor and measure the number of comparisons required to find a set of telephone numbers.
+Observations:
+Compare the performance of separate chaining and open addressing under different load factors.
+Consider scenarios with varying key distributions (uniform, clustered, etc.).
+Evaluate the impact of hash function quality on collision resolution and overall performance.
+Conclusion:
+Based on empirical results, draw conclusions about which collision handling technique performs better under specific conditions.
+Consider factors like average and worst-case performance, memory usage, and ease of implementation.
+Real-World Considerations:
+Implementation Overhead:
+Consider the complexity and overhead of implementing each collision handling technique, including memory management and handling edge cases.
+Dynamic Resizing:
+Evaluate the impact of dynamic resizing on performance for both collision handling techniques. Resizing can become more frequent with open addressing as the load factor increases.
+Concurrency:
+Assess the concurrency support of each collision handling technique. Separate chaining may offer better concurrency due to independent linked lists, while open addressing may require additional synchronization mechanisms.
+
+Conclusion:
+
+For small to moderate-sized hash tables with low load factors, separate chaining may perform better due to its simplicity and ability to handle collisions efficiently.
+For hash tables with high load factors or when memory is a concern, open addressing techniques may be preferable, but the specific technique used and its performance can depend heavily on factors like the hash function and the distribution of keys.
+*/

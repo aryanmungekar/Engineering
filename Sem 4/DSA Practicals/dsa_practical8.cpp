@@ -374,3 +374,47 @@ void dict::input_update()
     				  }while(ch!=6);
     				return 0;
 				}
+
+
+				
+/*
+Theory:
+Height-Balanced Tree (AVL Tree):
+An AVL tree is a self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one.
+This property ensures that the tree remains balanced, maintaining a time complexity of O(log n) for key operations like insertion, deletion, and search.
+Dictionary Operations:
+Insertion: Add new keywords and their meanings to the AVL tree while ensuring balance.
+Deletion: Remove keywords from the AVL tree while maintaining balance.
+Updating Values: Update the meanings of existing keywords in the AVL tree.
+Sorting: Display the entire dictionary sorted in ascending or descending order by performing an inorder traversal of the AVL tree.
+Finding Maximum Comparisons: Analyze the maximum number of comparisons required to find a keyword in the AVL tree.
+Implementation:
+AVL Tree Node:
+Each node in the AVL tree contains a keyword-meaning pair.
+Additionally, each node stores the height of its subtree and pointers to its left and right children.
+Dictionary Operations:
+Insertion, deletion, and updating values are standard AVL tree operations, modified to handle keyword-meaning pairs.
+Sorting can be achieved by performing an inorder traversal of the AVL tree and printing the nodes in the desired order.
+Finding Maximum Comparisons:
+Analyze the height of the AVL tree to determine the maximum number of comparisons required to find a keyword.
+The maximum height of the AVL tree, h, represents the worst-case scenario for finding a keyword, resulting in O(h) comparisons.
+Time and Space Complexity:
+Insertion, Deletion, and Updating Values:
+Time Complexity: O(log n) due to the self-balancing property of the AVL tree.
+Space Complexity: O(n) to store n keyword-meaning pairs.
+Sorting:
+Time Complexity: O(n) to perform an inorder traversal of the AVL tree.
+Space Complexity: O(n) for storing the sorted dictionary.
+Finding Maximum Comparisons:
+Time Complexity: O(log n) in the average case, O(n) in the worst case when the tree is highly unbalanced.
+Real-World Considerations:
+Balancing Operations:
+Ensure that insertion, deletion, and updating operations maintain the balance property of the AVL tree to guarantee efficient search operations.
+Efficient Sorting:
+Implement efficient sorting algorithms tailored to the structure of the AVL tree to minimize time and space complexity during sorting.
+Handling Duplicates:
+Decide whether to allow duplicate keywords in the dictionary and implement appropriate handling mechanisms if needed.
+Conclusion:
+Using an AVL tree for implementing the dictionary provides efficient operations for adding, deleting, updating, sorting, and finding keywords. The self-balancing property of the AVL tree ensures that key operations maintain a time complexity of O(log n), making it suitable for large datasets. However, careful implementation and maintenance of balance are necessary to ensure optimal performance in real-world scenarios.
+
+*/

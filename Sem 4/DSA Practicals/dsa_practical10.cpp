@@ -18,6 +18,7 @@ class Heap
 	void displayMax(){cout<<"Maximum marks are :"<<maxheap[0]<<endl;}
 	void upAdjust(bool,int);
 };
+
 void Heap::get()
 {
 	cout<<"Enter number of students."<<endl;
@@ -35,6 +36,7 @@ void Heap::get()
 		upAdjust(1,i);
 	}
 }
+
 void Heap::upAdjust(bool m,int l)
 {
 	int s;
@@ -63,6 +65,7 @@ void Heap::upAdjust(bool m,int l)
 		}
 	}
 }
+
 main()
 {
 	Heap H;

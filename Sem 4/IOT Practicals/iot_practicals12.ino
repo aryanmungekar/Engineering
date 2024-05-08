@@ -46,3 +46,27 @@ void loop() {
   // Delay for a short interval before taking another reading
   delay(100); // Adjust the delay time as needed
 }
+
+/*Circuit Connection:
+
+Connect the VCC pin of the IR sensor to a 5V pin on the Arduino.
+Connect the GND pin of the IR sensor to a GND pin on the Arduino.
+Connect the OUT pin of the IR sensor to a digital pin (e.g., pin 2) on the Arduino.
+Connect three LEDs to digital output pins of the Arduino, each representing a different status: one for obstacle detected, one for obstacle not detected, and one for an error condition (if needed).
+Optionally, add current-limiting resistors (usually around 220 ohms) in series with each LED to prevent damage to the LEDs.
+
+Explanation:
+
+The code sets up the specified pins as inputs and outputs.
+It continuously reads the state of the IR sensor using digitalRead() and checks if an obstacle is detected.
+Depending on the sensor reading, it lights up the appropriate LED to indicate the status (obstacle detected or not detected).
+It also provides serial output for debugging purposes, which can be viewed using the Serial Monitor in the Arduino IDE.
+Conclusion:
+This simple Arduino application demonstrates how to use an IR sensor to detect obstacles and notify the user using LEDs. The same concept can be applied to Raspberry Pi or BeagleBoard by adapting the code accordingly and using appropriate GPIO pins for sensor input and LED output. Additionally, you can enhance the application by adding features like sound alerts or notifications through email or SMS.
+
+
+
+
+
+
+*/

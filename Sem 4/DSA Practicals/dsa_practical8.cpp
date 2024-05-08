@@ -12,7 +12,7 @@ keyword. Use Height balance tree and find the complexity for finding a keyword.
 using namespace std;
 class dict
 {
-    dict *root,*node,*left,*right,*tree1;
+    dict *root,*node,*left,*right,*tree1;mhgfd
     string s1,s2;
     int flag,flag1,flag2,flag3,cmp;
 public:

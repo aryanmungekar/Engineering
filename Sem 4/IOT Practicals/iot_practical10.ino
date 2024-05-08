@@ -46,3 +46,11 @@ void loop() {
   // Delay for a short interval before taking another reading
   delay(1000); // Adjust the delay time as needed
 }
+
+/*This program reads the analog value from a temperature sensor connected to one of the analog pins of the Arduino board. The analog value is then converted into temperature using a conversion formula specific to the type of temperature sensor being used (e.g., thermistor, LM35, etc.). The calculated temperature value is then sent to the Serial Monitor for display on the computer.
+
+Conclusion:
+
+This Arduino program reads the analog value from a temperature sensor connected to the Arduino board, converts it into temperature in degrees Celsius, and then sends the temperature value to the Serial Monitor on the computer. By monitoring the Serial Monitor, you can observe the real-time temperature readings from the sensor. This program demonstrates how to read analog sensor values and communicate with a computer using Serial communication on an Arduino board.
+
+*/

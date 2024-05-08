@@ -39,3 +39,13 @@ void loop() {
   analogWrite(greenPin, greenIntensity);
   analogWrite(bluePin, blueIntensity);
 }
+
+/*
+Theory:
+
+This program reads analog values from three potentiometers connected to the Arduino's analog input pins. Each potentiometer is responsible for controlling the intensity of a specific color channel: red, green, or blue. The program then maps these analog values to the appropriate PWM (Pulse Width Modulation) range (0-255) for controlling the brightness of each color channel. By adjusting the potentiometers, the user can mix different intensities of red, green, and blue to produce various colors.
+
+Conclusion:
+
+This Arduino program allows the user to control the color of an RGB LED by adjusting three potentiometers. The potentiometers control the intensity of the red, green, and blue color channels, respectively. By adjusting the potentiometers, the user can create a wide range of colors by mixing different intensities of red, green, and blue light. This program demonstrates how to read analog values from potentiometers and use PWM to control the brightness of an RGB LED on an Arduino.
+*/

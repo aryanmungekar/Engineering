@@ -57,3 +57,19 @@ void loop() {
     }
   }
 }
+
+/*
+Theory:
+
+This Arduino program uses the Serial communication feature to receive input characters from the user. Based on the received character, it controls the illumination of different LEDs connected to the Arduino board.
+
+Conclusion:
+
+This Arduino program allows the user to control the illumination of different LEDs (green, yellow, and red) by sending specific characters through the Serial Monitor in the Arduino IDE. Depending on the received character, the corresponding LED is illuminated or blinked. This program demonstrates the use of Serial communication for user interaction and the control of multiple LEDs based on input commands. It can be further extended to incorporate error handling, additional functionalities, or integration with other devices or systems.
+
+
+
+
+
+
+*/

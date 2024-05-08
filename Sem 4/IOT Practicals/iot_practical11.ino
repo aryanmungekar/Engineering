@@ -80,3 +80,22 @@ void loop() {
   // Delay for a short interval before taking another reading
   delay(1000); // Adjust the delay time as needed
 }
+
+
+/*
+Theory:
+
+This program reads the analog value from a temperature sensor connected to one of the analog pins of the Arduino board. The analog value is then converted into temperature in both Celsius and Fahrenheit using appropriate conversion formulas. The program keeps track of the maximum and minimum temperatures seen so far. The calculated temperatures, along with the maximum and minimum values, are then sent to the Serial Monitor for display on the computer.
+
+Conclusion:
+
+This Arduino program reads the analog value from a temperature sensor connected to the Arduino board, converts it into temperature in both Celsius and Fahrenheit, and then sends the temperature values, along with the maximum and minimum temperatures seen so far, to the Serial Monitor on the computer. By monitoring the Serial Monitor, you can observe the real-time temperature readings in both Celsius and Fahrenheit, as well as track the maximum and minimum temperatures. This program demonstrates how to perform temperature conversions and track maximum and minimum values using an Arduino board.
+
+
+
+
+
+
+
+
+*/

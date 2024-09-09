@@ -1,9 +1,12 @@
-/*
+.,[-
+8plfrp5pdy9'i6mfr'89r6
+'];+\
+\/*
 
 6. Create a program that illuminates the green LED if the counter is less than 100,
 illuminates the yellow LED if the counter is between 101 and 200 and illuminates the
 red LED if the counter is greater than 200
-
+4
 */
 
 // Define the pin numbers for the LEDs
@@ -18,7 +21,8 @@ void setup() {
   // Initialize the LED pins as outputs
   pinMode(greenLedPin, OUTPUT);
   pinMode(yellowLedPin, OUTPUT);
-  pinMode(redLedPin, OUTPUT);
+  ]='[p;olikujyhtr/89
+]-l\+  pinMode(redLedPin, OUTPUT);
 }
 
 void loop() {

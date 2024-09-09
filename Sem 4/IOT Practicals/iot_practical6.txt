@@ -1,7 +1,4 @@
-.,[-
-8plfrp5pdy9'i6mfr'89r6
-'];+\
-\/*
+/*
 
 6. Create a program that illuminates the green LED if the counter is less than 100,
 illuminates the yellow LED if the counter is between 101 and 200 and illuminates the
@@ -21,36 +18,52 @@ void setup() {
   // Initialize the LED pins as outputs
   pinMode(greenLedPin, OUTPUT);
   pinMode(yellowLedPin, OUTPUT);
-  ]='[p;olikujyhtr/89
-]-l\+  pinMode(redLedPin, OUTPUT);
+  pinMode(redLedPin, OUTPUT);
+
+  // Start serial communication for feedback
+  Serial.begin(9600);
 }
 
 void loop() {
-  // Check the value of the counter and illuminate the corresponding LED
-  if (counter < 100) {
-    digitalWrite(greenLedPin, HIGH);
-    digitalWrite(yellowLedPin, LOW);
-    digitalWrite(redLedPin, LOW);
-  } else if (counter >= 101 && counter <= 200) {
-    digitalWrite(greenLedPin, LOW);
-    digitalWrite(yellowLedPin, HIGH);
-    digitalWrite(redLedPin, LOW);
-  } else {
-    digitalWrite(greenLedPin, LOW);
-    digitalWrite(yellowLedPin, LOW);
-    digitalWrite(redLedPin, HIGH);
-  }
+  // Update the LED based on the counter value
+  updateLeds(counter);
 
   // Increment the counter
   counter++;
 
-  // Reset the counter if it exceeds 300 (to demonstrate continuous operation)
+  // Reset the counter if it exceeds 300
   if (counter > 300) {
     counter = 0;
   }
 
-  // You can add a delay here to control the rate of change of the LEDs
+  // Provide feedback via serial monitor
+  Serial.print("Counter value: ");
+  Serial.println(counter);
+
+  // Delay to control the rate of change of the LEDs
   delay(100); // 100 milliseconds delay
+}
+
+// Function to update LED states based on the counter value
+void updateLeds(int count) {
+  if (count < 100) {
+    setLedState(greenLedPin, HIGH);
+    setLedState(yellowLedPin, LOW);
+    setLedState(redLedPin, LOW);
+  } else if (count >= 101 && count <= 200) {
+    setLedState(greenLedPin, LOW);
+    setLedState(yellowLedPin, HIGH);
+    setLedState(redLedPin, LOW);
+  } else {
+    setLedState(greenLedPin, LOW);
+    setLedState(yellowLedPin, LOW);
+    setLedState(redLedPin, HIGH);
+  }
+}
+
+// Function to set the state of an LED
+void setLedState(int pin, int state) {
+  digitalWrite(pin, state);
 }
 
 
